@@ -42,6 +42,7 @@ jobs:
 
 
   upload:
+    needs: terraform
     runs-on: ubuntu-latest
 
     steps:
