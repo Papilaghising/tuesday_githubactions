@@ -10,9 +10,7 @@ resource "aws_instance" "ec2_instance" {
     project   = "terraform"
     terraform = true
   }
-
 }
-
 
 resource "aws_s3_bucket" "ghising" {
   bucket = "ghising"
