@@ -18,7 +18,7 @@ resource "aws_security_group" "papila" {
   description = "Example security group for EC2 instance"
   vpc_id = "vpc-03e4b7c0dc5b1e678"
 
-  # Ingress rule for SSH access
+  # Ingress rule for SSH 
   ingress {
     from_port   = 22
     to_port     = 22
