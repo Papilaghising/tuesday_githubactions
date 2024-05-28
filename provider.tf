@@ -8,14 +8,3 @@ terraform {
   required_version = ">= 0.13"
 }
 
-provider "aws" {
-    region = var.region
-    default_tags {
-        tags ={
-        silo = "intern"
-        project = "github_actions"
-        terraform = true
-        owner = "papila.ghising"
-        }
-    }
-}
