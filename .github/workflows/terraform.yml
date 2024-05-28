@@ -9,7 +9,7 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-     env:
+    env:
       AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS }}
       AWS_SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }}
@@ -25,13 +25,11 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
-        
 
       - name: Plan Terraform Changes
         run: terraform plan -var-file=vars.tfvars
-        
 
       - name: Apply Terraform Changes
         run: terraform apply -var-file=vars.tfvars
-        
+
 
