@@ -24,7 +24,7 @@ jobs:
           terraform init
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }} 
 
 
@@ -35,7 +35,7 @@ jobs:
           terraform apply -var-file=vars.tfvars -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }} 
 
 
