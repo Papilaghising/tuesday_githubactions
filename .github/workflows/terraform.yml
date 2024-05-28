@@ -3,7 +3,7 @@ name: Terraform Deployment
 on:
   push:
     branches:
-      - terraform  # Change this to the name of your branch where Terraform code resides
+      - tuesday_githubactions  
 
 jobs:
   terraform:
