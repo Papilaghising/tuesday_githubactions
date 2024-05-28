@@ -51,10 +51,10 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
-          AWS_SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }}
-          AWS_REGION: us-east-1
+          AWS-ACCESS-KEY-ID: ${{ secrets.ACCESS_KEY }}
+          AWS-SECRET-ACCESS-KEY: ${{ secrets.SECRET_KEY }}
+          AWS-SESSION-TOKEN: ${{ secrets.SESSION_TOKEN }}
+          AWS-REGION: us-east-1
 
       - name: Upload to S3
         run: |
