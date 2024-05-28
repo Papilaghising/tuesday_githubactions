@@ -30,7 +30,7 @@ resource "aws_security_group" "papila" {
   egress {
     from_port       = 0
     to_port         = 0
-    protocol        = "-1"  # All protocols
+    protocol        = "-1"  
     cidr_blocks     = ["0.0.0.0/0"]
   }
 }
