@@ -14,8 +14,8 @@ resource "aws_instance" "ec2_instance" {
 }
 
 
-resource "aws_s3_bucket" "papila" {
-  bucket = "papila"
+resource "aws_s3_bucket" "ghising" {
+  bucket = "ghising"
     tags = {
     Name      = "papila"
     silo      = "intern"
