@@ -20,13 +20,13 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
-        working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
       - name: Plan Terraform Changes
         run: terraform plan
-        working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
       - name: Apply Terraform Changes
         run: terraform apply -auto-approve
-        working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
