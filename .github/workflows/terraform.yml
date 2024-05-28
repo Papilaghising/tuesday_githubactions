@@ -30,7 +30,7 @@ jobs:
 
 
       - name: Apply Terraform Changes
-        run:|
+        run: |
           cd code
           terraform apply -var-file=vars.tfvars -auto-approve
         env:
