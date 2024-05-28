@@ -9,6 +9,11 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
+     env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -16,17 +21,17 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 1.1.6  # Specify the version of Terraform you want to use
+          terraform_version: 1.1.6  
 
       - name: Initialize Terraform
         run: terraform init
-        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        
 
       - name: Plan Terraform Changes
         run: terraform plan -var-file=vars.tfvars
-        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        
 
       - name: Apply Terraform Changes
         run: terraform apply -var-file=vars.tfvars
-        #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
+        
 
