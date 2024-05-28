@@ -23,10 +23,10 @@ jobs:
         #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
       - name: Plan Terraform Changes
-        run: terraform plan
+        run: terraform plan -var-file=vars.tfvars
         #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
       - name: Apply Terraform Changes
-        run: terraform apply -auto-approve
+        run: terraform apply -var-file=vars.tfvars
         #working-directory: ./TUES_GTIACTIONS  # Adjust the path to your Terraform configuration directory
 
