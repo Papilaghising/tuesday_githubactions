@@ -23,7 +23,3 @@ resource "aws_s3_bucket" "ghising" {
     terraform = true 
     }
 }
-resource "aws_s3_bucket_acl" "papila" {
-  bucket = aws_s3_bucket.papila.id
-  acl    = "private"
-}
